@@ -1,0 +1,43 @@
+
+#**************************** INTELLECTUAL PROPERTY RIGHTS ****************************#
+#*                                                                                    *#
+#*                           Copyright (c) 2025 Terminus LLC                          *#
+#*                                                                                    *#
+#*                                All Rights Reserved.                                *#
+#*                                                                                    *#
+#*          Use of this source code is governed by LICENSE in the repo root.          *#
+#*                                                                                    *#
+#**************************** INTELLECTUAL PROPERTY RIGHTS ****************************#
+#
+[project]
+
+name = "terminus-astro-testgen"
+version = "0.0.1"
+description = "Test dataset generator using Astropy"
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3.11"
+]
+
+#  Dependencies
+dependencies = [
+    'astropy'
+]
+
+#  Optional Dependencies
+[project.optional-dependencies]
+dev = [ 'black' ]
+
+#  Project Information
+[project.urls]
+"Homepage" = "https://github.com/Terminus-Geospatial/terminus-astro"
+
+[project.scripts]
+"tmns-astro-testgen-astropy" = "testgen.main:run"
+
+#  Configure the build system
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
