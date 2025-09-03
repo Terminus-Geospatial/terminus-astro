@@ -8,4 +8,4 @@ MP_LIB_PATH="${HOME}/.micropython/lib"
 #  Copy micropython libraries to lib folder
 rsync -avP src/tmns/ ${MP_LIB_PATH}/tmns/
 
-${MP_BIN}
+${MP_BIN} -i src/main.py
